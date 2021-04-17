@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "FocusTube",
+  "version": "1.0",
+
+  "description": "Remove suggested videos from YouTube",
+
+  "icons": {
+    "48": "icons/focus-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["focustube.js"]
+    }
+  ]
+
+}
