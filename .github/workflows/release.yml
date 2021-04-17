@@ -1,0 +1,17 @@
+name: Release package
+on: [workflow_dispatch]
+jobs:
+  Release-Package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Package
+        uses: actions/upload-artifact@v2
+        with:
+          name: focustube
+          path: |
+            .
+            !.github/*
+            !.git
+            !*.md
